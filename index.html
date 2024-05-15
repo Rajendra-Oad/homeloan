@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+        href="https://asset-service-bucket-prod.s3.us-west-2.amazonaws.com/f1eb6d3d-102e-49e2-bfc8-f8ace629ebc6"
+        type="image/x-icon">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Home Loan - Home</title>
+</head>
+
+<body>
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- top-nav--section--starts -->
+    <div id="top-nav">
+        <div class=" py-2 px-5">
+            <div class="row mx-3">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/login/" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://twitter.com/i/flow/login" target="_blank"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/login" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/login" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                    </li>
+                </ul>
+                <div class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="">
+                            <i class="fa-solid fa-phone-flip"></i>&nbsp;
+                            <span>+81-42627-156</span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- nav-bar--section-start -->
+    <div id="nav" class="text-fluid px-5">
+        <nav class="navbar navbar-expand-md navbar-dark py-3">
+            <!-- Brand -->
+            <a class="navbar-brand ml-4" href="index.html">
+                <h2>Home Loan</h2>
+            </a>
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-4 active">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <div class="dropdown ">
+                            <a class=" nav-link dropdown-toggle" data-toggle="dropdown">Membership</a>
+                            <div class="dropdown-menu">
+                                <h5 class="dropdown-header">Premier-plan</h5>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Gold </a>
+                                <!-- a to Open the Modal -->
+                                <a href="#myModal" class="dropdown-item" data-toggle="modal">Diamond</a>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Button to Open the Modal -->
+                        <button class=" btn p-2 px-3 bg-warning rounded-pill nav-link text-dark" data-toggle="modal"
+                            data-target="#myModal">Login</button>
+
+                        <!-- The Modal -->
+                        <div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title ml-auto">Login</h4>
+                                        <button type="button" class="close text-danger"
+                                            data-dismiss="modal"><span>&times;</span></button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="input">
+                                                <div class="txt">
+                                                    <input type="text" placeholder="Username">
+                                                </div>
+                                                <div class="txt">
+                                                    <div class="password">
+                                                        <input type="password" placeholder="Password">
+                                                        <i class="fa-regular fa-eye-slash"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="fpass">
+                                                    <div class="me">
+                                                        <input type="checkbox" id="me">
+                                                        <label for="me">Remember me</label>
+                                                    </div>
+                                                    <p>forget password?</p>
+                                                </div>
+                                                <br>
+                                                <div class="submit">
+                                                    <a href="index.html"><input type="button" value="login"></a>
+                                                </div>
+                                                <br>
+                                            </div>
+                                        </form>
+                                        <div class="padding" style="padding: 0 40px;">
+                                            <div
+                                                style="width: 100%; height: 10px; border-bottom: 1px solid black; text-align: center;">
+                                                <span
+                                                    style="font-size: 15px; background-color: white;padding: 0 10px;">OR</span>
+                                            </div>
+                                        </div>
+                                        <div class="buttom">
+                                            <div class="icons">
+                                                <div class="icons--circle1">
+                                                    <i class="fa-brands fa-facebook-f"></i>
+                                                </div>
+                                                &nbsp;&nbsp;
+                                                <div class="icons--circle2">
+                                                    <i class="fa-brands fa-twitter"></i>
+                                                </div>
+                                                &nbsp;&nbsp;
+                                                <div class="icons--circle3">
+                                                    <i class="fa-brands fa-google"></i>
+                                                </div>
+                                            </div>
+                                            <div class="signup">
+                                                <p>Don't have an account?<a href="#">Signup</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+
+    </div>
+    </li>
+    </ul>
+    </div>
+    </nav>
+    </div>
+    <!-- banner--section-start -->
+    <section id="banner">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="./images/banner1.jpg" alt="Los Angeles" class="img-fluid">
+                    <div class="carousel-caption">
+                        <div class="txt-banner">
+                            <h1>Make Your Dreams Comes True</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque obcaecati
+                                aperiam
+                                quae provident <br> illum consequuntur expedita eveniet ut, natus tempora quia atque hic
+                                blanditiis.</p>
+                            <br>
+                            <p>>Read More >></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img src="./images/banner-2.jpg" alt="Chicago" class="img-fluid">
+                    <div class="carousel-caption">
+                        <div class="txt-banner">
+                            <h1>Make Your Dreams Comes True</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque obcaecati
+                                aperiam
+                                quae provident <br> illum consequuntur expedita eveniet ut, natus tempora quia atque hic
+                                blanditiis.</p>
+                            <br>
+                            <p>Read More >></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/banner-3.jpg" alt="New York" class="img-fluid">
+                    <div class="carousel-caption">
+                        <div class="txt-banner">
+                            <h1>Make Your Dreams Comes True</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque obcaecati
+                                aperiam
+                                quae provident <br> illum consequuntur expedita eveniet ut, natus tempora quia atque hic
+                                blanditiis.</p>
+                            <br>
+                            <p>Read More >></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </section>
+    <!-- service--section-start -->
+    <section id="service" class="container">
+        <div class="heading mx-auto">
+            <h1>Loan Products We Offer</h1>
+            <p>Speed Up The Loan Process</p>
+        </div>
+        <div class="row mx-auto mt-4 ">
+            <div class="col-md-12 col-12 col-sm-12 col-lg-4">
+                <div class="card py-5 mt-4 px-2 border-0 shadow px-2 p-xs-0">
+                    <div class="card-body">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <div class="card-title mt-3">1.Buying a home</div>
+                        <div class="card-text text-black-50">Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                            Sunt, ipsa.Nes ciunt, lab iosam, deleniti conseq uu ntur placeatma gni cumque labore
+                            voluptas ipmus.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 col-sm-12 col-lg-4">
+                <div class="card py-5 px-2 mt-4 border-0 shadow px-2 p-xs-0"">
+                    <div class=" card-body">
+                    <i class="fa-solid fa-building"></i>
+                    <div class="card-title mt-3">2.Refinancing</div>
+                    <div class="card-text text-black-50">Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                        Sunt, ipsa.Nes ciunt, lab iosam, deleniti conseq uu ntur placeatma gni cumque labore
+                        voluptas ipmus.</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-12 col-sm-12 col-lg-4">
+            <div class="card py-5 px-2 mt-4 border-0 shadow px-2 p-xs-0"">
+                    <div class=" card-body ">
+                        <i class=" fa-solid fa-credit-card"></i>
+                <div class="card-title mt-3">3.Credit Service</div>
+                <div class="card-text text-black-50">Lorem ipsum dolor sit amet consec tetur adipisicing elit.
+                    Sunt, ipsa.Nes ciunt, lab iosam, deleniti conseq uu ntur placeatma gni cumque labore
+                    voluptas ipmus.</div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <section id="process" class="container">
+        <div class="heading mx-auto">
+            <h1>Fast & Easy Application Process</h1>
+            <p>Speed Up The Loan Process</p>
+        </div>
+        <div class="row container mx-auto pb-5 mb-5">
+            <div id="accordian" class="col-md-12 col-sm-12 col-lg-6">
+                <div class="col">
+                    <div class="card mb-3">
+                        <div class="card-header pr-0" data-toggle="collapse" data-target="#text1"><span><i
+                                    class="fa-solid fa-check"></i> Choose Loan Amount</span></div>
+                        <div id="text1" data-parent="#accordian" class=" collapse show active">
+                            <div class="card-body">
+                                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Enim error
+                                    dolorum distinctio dolore odio similique delectus, praes entium soluta eius quasi
+                                    aspernatur
+                                    vel voluptate quae dolori bus, assumenda commodi neque iusto esse?
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header pr-0 " data-toggle="collapse" data-target="#text2">
+                            <span><i class="fa-solid fa-check"></i> Get Your Loan Approved</span>
+                        </div>
+                        <div id="text2" data-parent="#accordian" class=" collapse">
+                            <div class="card-body">
+                                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Enim error
+                                    dolorum distinctio dolore odio similique delectus, praes entium soluta eius quasi
+                                    aspernatur
+                                    vel voluptate quae dolori bus, assumenda commodi neque iusto esse?
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header pr-0" data-toggle="collapse" data-target="#text3">
+                            <span><i class="fa-solid fa-check"></i> For New Home Purchase</span>
+                        </div>
+                        <div id="text3" data-parent="#accordian" class=" collapse">
+                            <div class="card-body">
+                                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Enim error
+                                    dolorum distinctio dolore odio similique delectus, praes entium soluta eius quasi
+                                    aspernatur
+                                    vel voluptate quae dolori bus, assumenda commodi neque iusto esse?
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 col-sm-12 col-lg-6 mt-lg-0 mt-5">
+                <img src="./images/process.jpg" alt="process1" style="width: 100%;" class="rounded my-xs-5 img-fluid">
+            </div>
+        </div>
+    </section>
+    <section id="news" class="container">
+        <div class="heading">
+            <h1>Latest News From Loan Company</h1>
+            <p>Speed Up The Loan Process</p>
+        </div>
+        <div class="row mx-auto container pb-5">
+            <div class="col-md-12 col-12 col-sm-12 col-lg-4">
+                <div class="card">
+                    <img src="./images/company4.jpg" alt="" style="width: 100%;" class="img-fluid">
+                    <div class="card-body">
+                        <div class="card-title">Smart Moving Tips</div>
+                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+                            similique.</div>
+                    </div>
+                    <div class="card-footer text-black-50">Last updated on may 18,2023</div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 col-sm-12 col-lg-4">
+                <div class="card">
+                    <img src="./images/compant2.jpg" alt="" style="width: 100%;" class="img-fluid">
+                    <div class="card-body">
+                        <div class="card-title">A Big Time Saver</div>
+                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+                            similique.</div>
+                    </div>
+                    <div class="card-footer text-black-50">Last updated on may 18,2023</div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 col-sm-12 col-lg-4">
+                <div class="card">
+                    <img src="./images/company1.jpg" alt="" style="width: 100%;" class="img-fluid">
+                    <div class="card-body">
+                        <div class="card-title">Is Now The Time To Fix?</div>
+                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+                            similique.</div>
+                    </div>
+                    <div class="card-footer text-black-50">Last updated on may 18,2023</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="container-fluid pb-5 pl-md-5">
+        <div class="row text-white px-5 pt-5">
+            <div class="col-12 col-md-3">
+                <h5>About Us</h5>
+                <p>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Maiores ipsa ducimus <br>aliquid,
+                    officia
+                    pariatur vitae perferendis <br>cumque, dolorem!</p>
+            </div>
+            <div class="col-12 col2 col-md-3">
+                <h5>Contact Us</h5>
+                <span>Address:</span><br>
+                No-27-283127 street loream,<br>Newyork City,USA<br>
+                <span>Phone:+(8277)627464</span><br>
+                <span>Email:</span><br>
+                info@emaple.com<br>
+                <span>Fax:717(76)7723</span>
+            </div>
+            <hr class="hr">
+            <div class="col-12 col-md-3">
+                <h5>Recent Posts</h5>
+                <table style="width: 85%;">
+                    <tr>
+                        <td class="p-1"><img src="./images/company4.jpg" alt="company1"></td>
+                        <td class="p-1"><img src="./images/company1.jpg" alt="company2"></td>
+                        <td class="p-1"><img src="./images/company6.jpeg" alt="company3"></td>
+                    </tr>
+                    <tr>
+                        <td class="p-1"><img src="./images/company5.jpeg" alt="company4"></td>
+                        <td class="p-1"><img src="./images/company1.jpg" alt="company5"></td>
+                        <td class="p-1"><img src="./images/compant2.jpg" alt="company6"></td>
+                    </tr>
+                    <tr>
+                        <td class="p-1"><img src="./images/company9.jpg" alt="company7"></td>
+                        <td class="p-1"><img src="./images/company8.webp" alt="company8"></td>
+                        <td class="p-1"><img src="./images/company7.jpg" alt="company9"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-12 col4 col-md-3">
+                <h5>Subscribe</h5>
+                <p>commodi. Commodi quae deserunt<br>dignissimos.</p> <br>
+                <form>
+                    <input type="text" placeholder="Youe email...">
+                    <button><i class="fa-regular fa-envelope"></i></button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <div class="container-fluid f-bottom p-3">
+        <div class="row text-white d-flex justify-content-between flex-wrap">
+            <div class="col copy offset-md-1">
+                <p>© 2023 Home Loan.All Rights Reserved |Design by <span>Rajendra Oad</span></p>
+            </div>
+            <div class="col follow offset-md-2">
+                <span>Follow us on:</span>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-google-plus-g"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Heading</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Modal body..
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

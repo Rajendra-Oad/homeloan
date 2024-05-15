@@ -1,0 +1,475 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: #F6F7F9;
+}
+/* nav-bar--section--starts */
+#nav {
+    background-color: #F6F7F9 !important;
+}
+#nav .navbar-toggler-icon {
+    color: #202228 !important;
+}
+#nav a{
+    color: #0E0F11 !important;
+    cursor: pointer !important;
+}
+#nav .navbar-nav .nav-item a{
+    font-weight: 600;
+}
+#top-nav{
+    background-color: #F4511E;
+}
+#top-nav a{
+    color: #F6F7F9 !important;
+}
+/* banner-style-starts */
+    #banner .carousel-indicators li{
+        width: 10px;
+        height: 10px ;
+        border-radius: 100%;
+    }
+    #banner .carousel-inner .carousel-item p:last-child{
+        margin-bottom: 180px !important;
+    }
+/* service--style */
+#service i{
+    color: #F4511E;
+    font-size: 28px;
+}
+#service .row .card{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.045) !important;
+    /* animation: ani 2s alternate ;
+    transition: 0.5s; */
+
+}
+/* #service .row .card:hover{
+    transform: scale(1.09);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.087) !important;
+} */
+#service .heading{
+    margin-top: 82px;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 1px;
+}
+#service .heading h1{
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+#service .heading p{
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.7;
+}
+#service .heading::after{
+    content: "";
+    width: 70px;
+    margin: 10px auto 0;
+    display: block;
+    background-color: #F4511E;
+    height: 3px;
+}
+#service .row .card .card-body .card-title{
+    font-size: 24px ;
+    font-weight: 600;
+    opacity: 0.85;
+}
+#service .row .card .card-body .card-text{
+    font-size: 18px;
+}
+
+/* process-section strats */
+#process i{
+    color: #F4511E;
+    font-size: 16px;
+    margin-right: 10px;
+}
+#process .heading{
+    margin-top: 130px;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 1px;
+}
+#process .heading h1{
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+#process .heading p{
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.7;
+}
+#process .heading::after{
+    content: "";
+    width: 70px;
+    margin: 10px auto 0;
+    display: block;
+    background-color: #F4511E;
+    height: 3px;
+    margin-bottom: 50px;
+}
+#process .row .card .card-header{
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    opacity: 0.85;
+}
+#process .row .card .card-body .card-text{
+    font-size: 17px;
+    opacity: 0.7;
+}
+/* Latest-news--section--starts */
+#news .heading{
+    margin-top: 90px;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 1px;
+}
+#news .heading h1{
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+#news .heading p{
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.7;
+}
+#news .heading::after{
+    content: "";
+    width: 70px;
+    margin: 10px auto 0;
+    display: block;
+    background-color: #F4511E;
+    height: 3px;
+    margin-bottom: 50px;
+}
+#news .card-title{
+    color: #F4511E !important;
+    font-size: 20px;
+    font-weight: 600;
+}
+#news .card-text{
+    opacity: 0.7 !important;
+    font-size: 16.5px !important;
+}
+/* footer--section--starts */
+footer{
+    background-color: #0E0F11;
+}
+footer .col2 span{
+    line-height: 30px;
+    color: #F4511E;
+}
+footer .col4 form input{
+    background-color: #0E0F11;
+    border: 1px solid rgba(128, 128, 128, 0.514);
+    padding: 9.2px;
+    color: #F6F7F9;
+    outline: none;
+    position: relative;
+    border-right: none;
+}
+footer .col4 form input:hover,footer .col4 form input:active{
+    border-right: none;
+    background-color: #202228;
+}
+footer .col4 form button{
+    background-color: #d2461b;
+    padding: 9.98px 15px;
+    position: absolute;
+    right: 10px 15px;
+    border: 0;
+    color: #F6F7F9;
+}
+footer .col4 form button:hover{
+    background-color: #F4511E;
+}
+footer table tr td{
+    border: 1px solid rgba(128, 128, 128, 0.255);
+    /* padding: 5px; */
+}
+footer table tr td:hover{
+    border: 1px solid white;
+}
+footer table tr td img{
+    width: 100%;
+}
+footer table{
+    border-collapse: separate;
+    border-spacing: 4px;
+}
+.f-bottom{
+    background-color: #141416;
+    color: #F6F7F9;
+} 
+.f-bottom .copy span{
+    color: #F4511E;
+} 
+.f-bottom .follow>i{
+    margin: 5px !important;
+}
+.f-bottom .row .col p{
+    margin-bottom: 0 !important;
+}
+.f-bottom .row .copy{
+    padding-left: 90px;
+}
+
+                        /*login--box--starts*/
+#myModal .login--form {               
+    width: 30%;
+    height: 510px;
+    background-color: white;
+    margin: 10px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 18px rgb(114, 113, 113);
+    display: block;
+}
+#myModal h2 {
+    text-align: center;
+    padding: 25px 15px ;
+    color: #F4511E;
+}
+#myModal .uname,.pwd,.submit{
+    padding: 20px;
+}
+#myModal .fpass {
+    margin: 15px 0;
+    text-align: center;
+    display: flex;
+    font-size: 13px;
+    justify-content: space-between;
+}
+#myModal .submit input{
+    background-color: #F4511E;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgb(194, 194, 194);
+    color: white;
+}
+#myModal form {
+    padding: 0 60px;
+}
+#myModal form .txt{
+   border-bottom: 2px solid grey;
+   margin: 10px 0;
+} 
+#myModal .txt input {
+    border: none;
+    margin: 0 auto;
+    padding: 15px 0;
+    width: 100%;
+}
+#myModal .icons i {
+    font-size: 13px;
+    color: white;
+    padding: 0 5px;
+    text-align: center;
+} 
+#myModal .icons {
+    padding: 25px 180px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: baseline;
+}
+#myModal .signup a {
+    color: #F4511E;
+}
+#myModal .signup {
+    text-align: center;
+}
+#myModal .submit {
+    padding: 5px;
+    text-align: center;
+}
+#myModal .icons--circle1 {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F4511E;
+}
+#myModal .icons--circle2 {
+    width: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #F4511E;
+}
+#myModal .icons--circle3 {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    padding: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #F4511E;
+}
+#myModal .password {
+    display: flex;
+}
+#myModal .password i{
+    padding: 15px 0;
+}
+#myModal .txt input{
+    outline: none;
+}    
+#myModal .submit input:hover{
+    background-color: #e03400;
+    opacity: 0.85;
+} 
+#myModal .modal-header span{
+    font-size: 30px !important;
+}
+
+                        /*login--box--ends*/
+@media (max-width:576px) {
+    footer form{
+        font-size: 11px;
+    }
+    .f-bottom .row .copy{
+        padding-right: 100px;
+    }
+    .f-bottom .row{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    #banner .carousel-inner .carousel-item h1{
+        margin-top: 100px !important;
+        margin-bottom: 0 !important;
+        font-size: 5px !important;
+    }
+
+}
+
+@media (max-width:768px) {
+    body{
+        width: 100% !important;
+        font-size: 10px !important;
+    }
+    #nav {
+        background-color: #0E0F11 !important;
+    }
+    #nav .navbar-toggler-icon {
+        color: #F6F7F9 !important;
+    }
+    #nav a{
+        color: #F6F7F9 !important;
+        font-size: 14px !important;
+        margin-left: 30px;
+    }
+    #nav button{
+        margin-left: 24px;
+        margin-top: 8px;
+    }
+    #banner .carousel-inner .carousel-item p:first-child{
+        font-size: 16px !important;
+    }
+    #banner .carousel-inner .carousel-item h1{
+        margin-bottom: 80px !important;
+    }
+    #banner .carousel-inner .carousel-item p{
+        display: none !important;
+    }
+    #banner .carousel-inner .carousel-item h1{
+        font-size: 25px !important;
+    }
+    #banner .carousel-control-prev,.carousel-control-next{
+        display: none;
+    }
+
+    #service .heading h1{
+        font-size: 25px !important;
+    }
+    #service .heading p{
+        font-size: 12px !important;
+    }
+    #service .row .col-12{
+        padding: 0 !important;
+    }
+    #process .heading h1{
+        font-size: 25px !important;
+    }
+    #process .heading p{
+        font-size: 12px !important;
+    }
+    #process .row .col-12{
+        padding: 0 !important;
+    }
+    #process .card .card-header{
+        cursor: pointer;
+    }
+    #news .heading h1{
+        font-size: 25px !important;
+       
+    }
+    #news .col-12 {
+        margin-bottom: 20px !important;
+    }
+    #news .heading p{
+        font-size: 12px !important;
+    }
+    #news .row .col-12{
+        padding: 0 !important;
+    }
+    #news .card .card-footer{
+        font-size: 16px !important;
+    }
+    }
+    
+
+@media (min-width:768px){
+    footer form{
+        font-size: 9.5px;
+    }
+    #banner .carousel-inner .carousel-item{
+        font-size: 15px !important;
+    }
+}
+@media (min-width:993px) {
+    footer input,button{
+        font-size: 16px !important;
+    }
+    #service .row .card{
+        width: 100%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.045) !important;
+        transition: transform 0.5s,background-color 0.2s;
+    }
+    #banner .carousel-inner .carousel-item .carousel-caption .txt-banner{
+        background-color: #0e0f112e;
+        padding:  0 10px;
+        border-radius: 10px;
+    }
+    #service .row .card:hover{
+        transform: scale(1.09);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.087) !important;
+        background-color: rgba(255, 255, 255, 0.667);
+    }
+}
+@media (min-width: 768px) and (max-width: 992px){
+    #banner .carousel-inner .carousel-item p:first-child{
+        display:none !important;
+    }
+    #banner .carousel-inner .carousel-item h1{
+        margin-top: 200px !important;
+    }
+    footer input,button{
+        font-size: 9px !important;
+    }
+}
