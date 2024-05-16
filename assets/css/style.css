@@ -19,6 +19,7 @@
     --text-color: #000;
     --text-50:#00000089;
     --border-50:#00000054;
+    --nav-icon:#0000001b;
     --shadow: 0 0 30px rgba(0, 0, 0, 0.05);
     --border-color: none; /* No border in light mode */
 }
@@ -68,6 +69,7 @@ body {
     --text-color: #fff;
     --text-50:#ffffff86;
     --border-50:#ffffff4d;
+    --nav-icon:#ffffff64;
     --shadow: 0 0 30px rgba(255, 255, 255, 0.1);
     --border-color: #ffffff55; /* White border in dark mode */
 }
@@ -119,8 +121,9 @@ nav .navbar {
 }
 
 
-nav .special-icons {
+nav .special-icons img {
     transition: all 0.1s;
+    background-color: var(--nav-icon);
 }
 
 nav .special-icons:active {
