@@ -271,14 +271,14 @@
 
     <!-- footer  -->
     <footer class="container-fluid">
-        <div class="row text-light px-5 pt-5 py-5">
+        <div class="row text-light px-3 px-md-5 pt-5 py-5">
             <div class="col-12 col-md-6 col-lg-4 col-xl-3">
                 <h5>About Us</h5>
                 <p>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Maiores ipsa ducimus <br>aliquid,
                     officia
                     pariatur vitae perferendis <br>cumque, dolorem!</p>
             </div>
-            <div class="col-12 col2 col-sm-6 col-lg-4 col-xl-3">
+            <div class="col-12 col2 col-sm-6 col-lg-4 col-xl-3 mt-3 mt-md-0">
                 <h5>Contact Us</h5>
                 <span>Address:</span><br>
                 No-27-283127 street loream,<br>Newyork City,USA<br>
@@ -287,7 +287,7 @@
                 info@emaple.com<br>
                 <span>Fax:717(76)7723</span>
             </div>
-            <div class="col-12 col-sm-6 mt-md-4 mt-lg-0 col-lg-4 col-xl-3">
+            <div class="col-12 col-sm-6 mt-md-4 mt-lg-0 col-lg-4 col-xl-3 mt-4 mt-md-0">
                 <h5>Recent Posts</h5>
                 <table style="width: 85%;">
                     <tr>
@@ -307,7 +307,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-12 col4 col-sm-6 mt-md-4 mt-lg-0 col-lg-12 col-xl-3">
+            <div class="col-12 col4 col-sm-6 mt-md-4 mt-lg-0 col-lg-12 col-xl-3 mt-4 mt-md-0">
                 <h5>Subscribe</h5>
                 <p>commodi. Commodi quae deserunt<br>dignissimos.</p>
                 <form id="subscriptionForm">
@@ -323,7 +323,7 @@
                 <div class="col-md-6 col-12 copy d-flex justify-content-md-start text-center justify-content-center">
                     <p>© 2023 Home Loan.All Rights Reserved | Design by <span>Rajendra Oad</span></p>
                 </div>
-                <div class="col-md-6 col-12 follow d-flex justify-content-md-end justify-content-center mb-3 mb-md-0">
+                <div class="col-md-6 col-12 follow d-flex justify-content-md-end justify-content-center">
                     <span>Follow us on:</span>
                     <i class="fa-brands fa-facebook-f"></i>
                     <i class="fa-brands fa-twitter"></i>
@@ -341,8 +341,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            let navLinks = document.querySelectorAll('.nav-link');
-
+            // Add event listeners to each navigation link
+            const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(navLink => {
                 navLink.addEventListener('click', () => {
                     navLinks.forEach(link => link.classList.remove('active'));
@@ -351,19 +351,22 @@
             });
 
             // Add event listener for dark mode toggle
-            const navIcon = document.querySelector('.nav-icon');
-            navIcon.addEventListener('click', toggleDarkMode);
+            const toggleButtons = document.querySelectorAll('.toggle-dark-mode');
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    toggleDarkMode(button);
+                });
+            });
         });
 
-        function toggleDarkMode() {
+        function toggleDarkMode(button) {
             const root = document.documentElement;
-            const button = document.querySelector('.toggle-dark-mode');
             if (root.classList.contains('dark-mode')) {
                 root.classList.remove('dark-mode');
-                button.innerHTML = '<i class="fas fa-moon"></i>';
+                button.innerHTML = '<i class="fa-solid fa-moon text-dark"></i>';
             } else {
                 root.classList.add('dark-mode');
-                button.innerHTML = '<i class="fas fa-sun"></i>';
+                button.innerHTML = '<i class="fa-solid fa-sun text-dark"></i>';
             }
         }
 
