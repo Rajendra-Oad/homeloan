@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--googe-font), sans-serif;
+    transition: all 0.2s;
+    cursor: default !important;
+}
+
+:root {
+    --main-theme: #fff;
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --theme-colors: #F4511E;
+    --googe-font: "Poppins", sans-serif;
+    --f-bottom: #141416;
+    --text-color: #000;
+    --text-50:#00000089;
+    --border-50:#00000054;
+    --shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    --border-color: none; /* No border in light mode */
+}
+
+body {
+    background-color: var(--main-theme);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--main-theme) !important;
+    color: var(--text-color);
+}
+.navbar  a{
+    color: var(--text-color);
+}
+
+.navbar a:hover{
+    color: var(--text-color);
+}
+
+.card {
+    background-color: var(--main-theme);
+    color: var(--text-color);
+}
+
+.accordion span{
+    color: var(--text-color);
+}
+
+.accordion .accordion-button {
+    background-color: var(--main-theme) !important;
+}
+
+.accordion .accordion-body {
+    background-color: var(--main-theme) !important;
+    color: var(--text-color) !important;
+}
+
+:root.dark-mode {
+    --main-theme: #000;
+    --primary-color: #fff;
+    --secondary-color: #000;
+    --theme-colors: #F4511E;
+    --googe-font: "Poppins", sans-serif;
+    --f-bottom: #141416;
+    --text-color: #fff;
+    --text-50:#ffffff86;
+    --border-50:#ffffff4d;
+    --shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    --border-color: #ffffff55; /* White border in dark mode */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color:var(--main-theme) !important;
+    background: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
+
+
+/* top bar css*/
+
+#top-bar {
+    background-color: var(--theme-colors);
+    /* height: 50px; */
+    align-items: center;
+    display: flex;
+    padding: 15px 0;
+}
+
+#top-bar a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    /* padding: 5px 10px; */
+    /* margin: 0 15px; */
+    font-size: 18px;
+}
+
+/* navbar css */
+nav {
+    background-color: var(--main-theme) !important;
+    border-bottom: 1px solid var(--border-50);
+}
+
+nav .navbar-toggler {
+    outline: none;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+nav .navbar {
+    font-weight: 600;
+    transition: all 0.4s;
+}
+
+
+nav .special-icons {
+    transition: all 0.1s;
+}
+
+nav .special-icons:active {
+    transform: scale(0.9);
+
+}
+
+nav .nav-item {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+nav .nav-link {
+    position: relative;
+    transition: color 0.2s;
+}
+
+nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: var(--theme-colors);
+    transition: width 0.3s ease;
+}
+
+nav .nav-link:hover::after,
+nav .nav-link:focus::after {
+    background-color: var(--theme-colors);
+    width: 100%;
+    left: 0;
+}
+
+nav .nav-link.active {
+    color: var(--theme-colors) !important;
+}
+
+nav a.nav-icon {
+    text-decoration: none;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+nav .nav-item.icon {
+    background-color: var(--theme-colors);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #000 !important;
+    transition: all 0.7s;
+}
+
+nav .nav-icon:active i {
+    transform: rotate(720deg);
+}
+
+/* banner css */
+#banner img {
+    width: 100px !important;
+    height: 100px !important;
+    overflow-x: hidden;
+}
+
+
+/* service css */
+
+#service i {
+    color: var(--theme-colors);
+    font-size: 28px;
+}
+
+#service .row .card {
+    box-shadow: var(--shadow) !important;
+    animation: ani 2s alternate;
+    transition: 0.5s;
+
+}
+
+#service .row .card:hover {
+    transform: scale(0.99);
+    box-shadow: var(--shadow) !important;
+}
+
+#service .heading::after {
+    content: "";
+    width: 70px;
+    margin: 10px auto 0;
+    display: block;
+    background-color: var(--theme-colors);
+    height: 3px;
+}
+
+#service .row .card .card-body .card-title {
+    font-size: 24px;
+    font-weight: 600;
+    opacity: 0.85;
+}
+
+#service .row .card .card-body .card-text {
+    font-size: 18px;
+}
+#service .card .card-text {
+    color: var(--text-50);
+}
+
+#service .card {
+    border: 1px solid var(--border-color) !important; /* Add border based on variable */
+}
+
+/* main inside the process section */
+
+#process i {
+    color: var(--theme-colors);
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#process .heading::after {
+    content: "";
+    width: 70px;
+    margin: 10px auto 0;
+    display: block;
+    background-color: var(--theme-colors);
+    height: 3px;
+    margin-bottom: 50px;
+}
+
+
+/* Latest-news--section */
+
+#news .heading::after {
+    content: "";
+    width: 70px;
+    margin: 10px auto 0;
+    display: block;
+    background-color: var(--theme-colors);
+    height: 3px;
+    margin-bottom: 50px;
+}
+
+#news .card-title {
+    color: var(--theme-colors);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#news .card {
+    border: 1px solid var(--border-50) !important;
+}
+
+#news .card .card-footer {
+    border-top: 1px solid var(--border-50);
+}
+
+
+#news img {
+    border-radius: 5px;
+}
+
+/* footer section */
+footer {
+    background-color: #0E0F11;
+}
+
+footer .col2 span {
+    line-height: 30px;
+    color: var(--theme-colors);
+}
+
+footer .col4 form input {
+    background-color: #0E0F11;
+    border: 1px solid rgba(128, 128, 128, 0.514);
+    padding: 9.2px;
+    color: #F6F7F9;
+    outline: none;
+    position: relative;
+    border-right: none;
+}
+
+footer .col4 form input:hover,
+footer .col4 form input:active {
+    border-right: none;
+}
+
+footer .col4 form button {
+    background-color: var(--theme-colors);
+    padding: 9.98px 15px;
+    position: absolute;
+    right: 10px 15px;
+    border: 0;
+    color: var(--secondary-color);
+}
+
+footer .col4 form button:hover {
+    background-color: var(--theme-colors);
+}
+
+footer table tr td {
+    border: 1px solid rgba(128, 128, 128, 0.255);
+    /* padding: 5px; */
+}
+
+footer table tr td:hover {
+    border: 1px solid var(--secondary-color);
+}
+
+footer table tr td img {
+    width: 100%;
+}
+
+footer table {
+    border-collapse: separate;
+    border-spacing: 4px;
+}
+
+.f-bottom {
+    background-color: var(--f-bottom);
+    color: var(--secondary-color);
+}
+
+.f-bottom .copy span {
+    color: var(--theme-colors);
+}
+
+.f-bottom .follow>i {
+    margin: 5px !important;
+}
+
+.f-bottom .row .col p {
+    margin-bottom: 0 !important;
+}
