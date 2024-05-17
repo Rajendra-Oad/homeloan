@@ -50,7 +50,7 @@
         <div class="container-md">
             <a class="navbar-brand m-0 fw-medium fs-2 me-auto" href="index.html"><span>Home Loan</span></a>
             <li class="nav-item d-flex align-items-center icon d-flex d-md-none">
-                <button class="nav-icon btn toggle-dark-mode border-0 rounded-pill" onclick="toggleMode()">
+                <button class="nav-icon btn toggle-dark-mode border-0 rounded-pill">
                     <i class="fa-solid fa-moon text-dark"></i>
                 </button>
             </li>
@@ -78,8 +78,9 @@
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                     <li class="nav-item d-flex align-items-center icon d-none d-md-flex">
-                        <button class="nav-icon btn toggle-dark-mode border-0 rounded-pill" onclick="toggleMode()">
+                        <button class="nav-icon btn toggle-dark-mode border-0 rounded-pill">
                             <i class="fa-solid fa-moon text-dark"></i>
+                         
                         </button>
                     </li>
                 </ul>
@@ -90,15 +91,26 @@
 
 
     <!-- banner with scroll container-->
-    <section id="banner ">
-        <img src="./assets/img/banner-3.jpg" alt="banner-3" class="w-100 d-block">
-        <div class="txt-banner position-absolute top-50 end-50 ms-5 text-light d-none d-xl-block">
-            <h1>Make Your Dreams Comes True</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque obcaecati
+    <section id="banner " >
+        <img src="./assets/img/banner-3.jpg" alt="banner-3" class="w-100 d-none d-md-block">
+        <img src="./assets/img/banner-3-sm.jpg" alt="banner-3" class="d-md-none w-100 d-block">
+        <div class="txt-banner position-absolute top-50 end-50 ms-md-5 ms-3 text-light d-none d-xl-block">
+            <h1 class="fs-1 fw-bold">Make Your Dreams Comes True</h1>
+            <p class="d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque obcaecati
                 aperiam
                 quae provident illum consequuntur expedita eveniet ut, natus tempora quia atque hic
                 blanditiis.</p>
             <button class="btn btn-outline-light">Read More >></button>
+        </div>
+        <div class="border border-start-0 border-end-0 rounded-bottom txt-banner py-4 d-block d-md-none px-3">
+
+            <h1>Make Your Dreams Comes True</h1>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque obcaecati
+                aperiam
+                quae provident illum consequuntur expedita eveniet ut, natus tempora quia atque hic
+                blanditiis.</p>
+            <button class="btn d-none btn-outline-dark">Read More >></button>
         </div>
     </section>
 
@@ -109,8 +121,8 @@
                 <h1>Loan Products We Offer</h1>
                 <p>Speed Up The Loan Process</p>
             </div>
-            <div class="container">
-                <div class="row mx-auto mt-4 ">
+            <div class="container-md">
+                <div class="row">
                     <div class="col-md-12 col-12 col-sm-12 col-lg-4">
                         <div class="card py-5 mt-4 px-2 border-0 px-2">
                             <div class="card-body">
@@ -155,8 +167,8 @@
                 <h1>Fast & Easy Application Process</h1>
                 <p>Speed Up The Loan Process</p>
             </div>
-            <div class="container">
-                <div class="row py-5">
+            <div class="container-md">
+                <div class="row d-flex flex-column-reverse flex-lg-column">
                     <div class="col-md-12 col-sm-12 col-lg-6">
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
@@ -219,7 +231,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12 col-12 col-sm-12 col-lg-6 mt-lg-0 mt-5">
+                    <div class="col-md-12 col-12 col-sm-12 col-lg-6 mt-lg-0 mt-lg-5 mb-4 mb-lg-0">
                         <img src="assets/img/process.jpg" alt="process1" style="width: 100%;"
                             class="rounded my-xs-5 img-fluid">
                     </div>
@@ -231,8 +243,11 @@
                 <h1>Latest News From Loan Company</h1>
                 <p>Speed Up The Loan Process</p>
             </div>
-            <div class="row mx-auto container pb-5">
+            <div class="container-md">
+              <div class="row pb-4">
+
                 <div class="col-md-12 col-12 col-sm-12 col-lg-4">
+
                     <div class="card mb-4 mb-lg-0">
                         <img src="./assets/img/company4.jpg" alt="" style="width: 100%;" class="img-fluid">
                         <div class="card-body">
@@ -265,6 +280,8 @@
                         <div class="card-footer">Last updated on may 18,2023</div>
                     </div>
                 </div>
+            </div>
+            
             </div>
         </section>
     </main>
@@ -354,7 +371,10 @@
             const toggleButtons = document.querySelectorAll('.toggle-dark-mode');
             toggleButtons.forEach(button => {
                 button.addEventListener('click', () => {
+                  setTimeout(()=>{
                     toggleDarkMode(button);
+                  },200);
+                    
                 });
             });
         });
