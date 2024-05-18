@@ -17,11 +17,85 @@
     --googe-font: "Poppins", sans-serif;
     --f-bottom: #141416;
     --text-color: #000;
-    --text-50:#00000089;
-    --border-50:#00000054;
-    --nav-icon:#0000001b;
+    --text-50: #00000089;
+    --border-50: #00000054;
+    --nav-icon: #0000001b;
     --shadow: 0 0 30px rgba(0, 0, 0, 0.05);
-    --border-color: none; /* No border in light mode */
+    --border-color: none;
+    /* No border in light mode */
+}
+
+.color-picker-alert-box {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+}
+button.btn-close {
+    background-color: var(--border-50);
+    outline: none !important;
+    border: none;
+    box-shadow: none !important;
+    border-radius: 50%;
+    font-size: 16px;
+    padding: 10px !important;
+    margin:15px 15px 0 0;
+}
+
+.alert {
+    max-height: 0;
+    /* Start with 0 height */
+    overflow: hidden;
+    /* Hide the content initially */
+    transition: max-height 0.3s ease;
+    /* Smooth transition for height change */
+}
+
+.alert.show {
+    max-height: 200px;
+    /* Adjust this value as per your need */
+}
+
+.select-color {
+    color: #000;
+}
+
+.select-color .color {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #fff;
+    font-size: 16px;
+}
+
+.select-color .color:active {
+    opacity: 0.5;
+    border: 1px solid #fff;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, all 0.7s;
+}
+
+.slide-inR {
+    opacity: 0;
+    transform: translateX(10%);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-inL {
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show,
+.slide-inR.show,
+.slide-inL.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 body {
@@ -33,11 +107,12 @@ body {
     background-color: var(--main-theme) !important;
     color: var(--text-color);
 }
-.navbar  a{
+
+.navbar a {
     color: var(--text-color);
 }
 
-.navbar a:hover{
+.navbar a:hover {
     color: var(--text-color);
 }
 
@@ -46,7 +121,7 @@ body {
     color: var(--text-color);
 }
 
-.accordion span{
+.accordion span {
     color: var(--text-color);
 }
 
@@ -67,15 +142,16 @@ body {
     --googe-font: "Poppins", sans-serif;
     --f-bottom: #141416;
     --text-color: #fff;
-    --text-50:#ffffff86;
-    --border-50:#ffffff52;
-    --nav-icon:#ffffff9d;
+    --text-50: #ffffff86;
+    --border-50: #ffffff52;
+    --nav-icon: #ffffff9d;
     --shadow: 0 0 30px rgba(255, 255, 255, 0.1);
-    --border-color: #ffffff; /* White border in dark mode */
+    --border-color: #ffffff;
+    /* White border in dark mode */
 }
 
 .accordion-button:not(.collapsed) {
-    background-color:var(--main-theme) !important;
+    background-color: var(--main-theme) !important;
     background: none;
 }
 
@@ -180,7 +256,7 @@ nav .nav-item.icon {
     justify-content: center;
     border-radius: 50%;
     color: #000 !important;
-    transition: all 0.7s ;
+    transition: all 0.7s;
 }
 
 nav .nav-icon:active i {
@@ -231,12 +307,14 @@ nav .nav-icon:active i {
 #service .row .card .card-body .card-text {
     font-size: 18px;
 }
+
 #service .card .card-text {
     color: var(--text-50);
 }
 
 #service .card {
-    border: 1px solid var(--border-color) !important; /* Add border based on variable */
+    border: 1px solid var(--border-color) !important;
+    /* Add border based on variable */
 }
 
 /* main inside the process section */
@@ -289,6 +367,128 @@ nav .nav-icon:active i {
     border-radius: 5px;
 }
 
+/* contact section */
+
+#contact {
+    overflow-x: hidden;
+}
+
+#contact .heading::after {
+    content: "";
+    width: 70px;
+    margin: 10px auto 0;
+    display: block;
+    background-color: var(--theme-colors);
+    height: 3px;
+    margin-bottom: 50px;
+}
+
+#contact .form-group {
+    margin-bottom: 20px;
+}
+
+
+#contact .btn-primary {
+    background-color: var(--theme-colors);
+    color: #000;
+    border: 1px solid var(--main-theme);
+    transition: all 0.7s;
+}
+
+
+#contact .btn-primary:hover {
+    background-color: var(--theme-colors);
+    color: #000;
+    border: 1px solid var(--theme-colors);
+}
+
+#contact input {
+    height: 45px !important;
+    background-color: var(--main-theme) !important;
+}
+
+#contact textarea {
+    background-color: var(--main-theme) !important;
+}
+
+::placeholder {
+    color: var(--text-50) !important;
+}
+
+@media (max-width:768px) {
+    #contact .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+        border: 1px solid transparent;
+        border-radius: 20px;
+        /* Add border radius */
+        /* background-color: var(--theme-colors); */
+    }
+
+    ::placeholder {
+        color: var(--text-50) !important;
+    }
+}
+
+/* about section */
+
+#about {
+    overflow-x: hidden;
+}
+
+#about .heading::after {
+    content: "";
+    width: 70px;
+    margin: 10px auto 0;
+    display: block;
+    background-color: var(--theme-colors);
+    height: 3px;
+    margin-bottom: 50px;
+}
+
+#about .card {
+    border-radius: 20px !important;
+    border: 1px solid var(--border-color);
+    background-color: var(--main-theme) !important;
+}
+
+#about .card-body.head-rate span {
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+    color: var(--theme-colors);
+}
+
+#about .card-body p {
+    color: var(--text-color);
+}
+
+#about.card1 .card-body1 img {
+    overflow: hidden;
+    width: 100% !important;
+}
+
+#about.card1 {
+    border: 1px solid var(--border-color);
+}
+
+#about.container-md .card1 {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+
+#about img {
+    overflow-x: hidden;
+}
+
+@media (max-width:576px) {
+    #about .img {
+        overflow: hidden;
+    }
+}
+
 /* footer section */
 footer {
     background-color: #0E0F11;
@@ -306,7 +506,7 @@ footer .col4 form input {
     padding: 9.2px;
     color: #F6F7F9;
     outline: none;
-    width:200px;
+    width: 200px;
     position: relative;
     border-right: none;
 }
