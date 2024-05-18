@@ -68,10 +68,10 @@ body {
     --f-bottom: #141416;
     --text-color: #fff;
     --text-50:#ffffff86;
-    --border-50:#ffffff4d;
-    --nav-icon:#ffffff64;
+    --border-50:#ffffff52;
+    --nav-icon:#ffffff9d;
     --shadow: 0 0 30px rgba(255, 255, 255, 0.1);
-    --border-color: #ffffff55; /* White border in dark mode */
+    --border-color: #ffffff; /* White border in dark mode */
 }
 
 .accordion-button:not(.collapsed) {
@@ -117,7 +117,7 @@ nav .navbar-toggler {
 
 nav .navbar {
     font-weight: 600;
-    transition: all 0.4s;
+    transition: all 1s;
 }
 
 
@@ -180,7 +180,7 @@ nav .nav-item.icon {
     justify-content: center;
     border-radius: 50%;
     color: #000 !important;
-    transition: all 0.7s;
+    transition: all 0.7s ;
 }
 
 nav .nav-icon:active i {
@@ -189,8 +189,7 @@ nav .nav-icon:active i {
 
 /* banner css */
 #banner img {
-    width: 100px !important;
-    height: 100px !important;
+    width: 100% !important;
     overflow-x: hidden;
 }
 
@@ -278,11 +277,11 @@ nav .nav-icon:active i {
 }
 
 #news .card {
-    border: 1px solid var(--border-50) !important;
+    border: 1px solid var(--border-color) !important;
 }
 
 #news .card .card-footer {
-    border-top: 1px solid var(--border-50);
+    border-top: 1px solid var(--border-color);
 }
 
 
@@ -307,7 +306,7 @@ footer .col4 form input {
     padding: 9.2px;
     color: #F6F7F9;
     outline: none;
-    width:160px;
+    width:200px;
     position: relative;
     border-right: none;
 }

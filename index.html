@@ -15,9 +15,32 @@
     <!-- custom css -->
     <link rel="stylesheet" href="assets\css\style.css">
     <title>Home Loan</title>
+    <style>
+        #scroll button {
+            position: fixed;
+            right: -150px;
+            bottom:10px;
+            width: 50px;
+            height: 50px;
+            z-index: 9999;
+            border: 1px solid var(--border-50);
+            transition: all 0.7s;
+            cursor: pointer !important;
+        }
+        #scroll button.show {
+            right: 10px;
+        }
+        #scroll button:hover{
+            background: #9f9f9f78;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- top-scroll -->
+    <div id="scroll">
+        <button class="btn btn-light rounded" id="topScroll" onclick="topFunction()"><i class="fa-solid fa-arrow-up" style="cursor: pointer !important;"></i></button>
+    </div>
 
     <!-- top bar  -->
     <div id="top-bar" class="d-none d-sm-block">
@@ -46,7 +69,7 @@
     </div>
 
     <!-- navbar container -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top" id="navbar">
         <div class="container-md">
             <a class="navbar-brand m-0 fw-medium fs-2 me-auto" href="index.html"><span>Home Loan</span></a>
             <li class="nav-item d-flex align-items-center icon d-flex d-md-none">
@@ -66,16 +89,16 @@
                         <a class="nav-link active" href="#" aria-current="page">Home</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="javasccript:void(0)">About</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#main">Services</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">Users</a>
+                        <a class="nav-link" href="javasccript:void(0)">Users</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="javasccript:void(0)">Contact</a>
                     </li>
                     <li class="nav-item d-flex align-items-center icon d-none d-md-flex">
                         <button class="nav-icon btn toggle-dark-mode border-0 rounded-pill">
@@ -91,9 +114,9 @@
 
 
     <!-- banner with scroll container-->
-    <section id="banner " >
+    <section id="banner" >
         <img src="./assets/img/banner-3.jpg" alt="banner-3" class="w-100 d-none d-md-block">
-        <img src="./assets/img/banner-3-sm.jpg" alt="banner-3" class="d-md-none w-100 d-block">
+        <img src="./assets/img/banner-3-sm.jpg" alt="banner-3-sm" class="d-md-none w-100 d-block">
         <div class="txt-banner position-absolute top-50 end-50 ms-md-5 ms-3 text-light d-none d-xl-block">
             <h1 class="fs-1 fw-bold">Make Your Dreams Comes True</h1>
             <p class="d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque obcaecati
@@ -104,7 +127,7 @@
         </div>
         <div class="border border-start-0 border-end-0 rounded-bottom txt-banner py-4 d-block d-md-none px-3">
 
-            <h1>Make Your Dreams Comes True</h1>
+            <h1 class="fw-medium fs-1">Make Your Dreams Comes True</h1>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque itaque obcaecati
                 aperiam
@@ -115,7 +138,7 @@
     </section>
 
     <!-- main content -->
-    <main>
+    <main id="main">
         <section id="service" class="py-5">
             <div class="heading mx-auto text-center">
                 <h1>Loan Products We Offer</h1>
@@ -168,7 +191,7 @@
                 <p>Speed Up The Loan Process</p>
             </div>
             <div class="container-md">
-                <div class="row d-flex flex-column-reverse flex-lg-column">
+                <div class="row">
                     <div class="col-md-12 col-sm-12 col-lg-6">
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
@@ -231,14 +254,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12 col-12 col-sm-12 col-lg-6 mt-lg-0 mt-lg-5 mb-4 mb-lg-0">
+                    <div class="col-md-12 col-12 col-sm-12 col-lg-6 mt-4 mt-md-0 mb-4 mb-lg-0">
                         <img src="assets/img/process.jpg" alt="process1" style="width: 100%;"
-                            class="rounded my-xs-5 img-fluid">
+                            class="rounded img-fluid">
                     </div>
                 </div>
             </div>
         </section>
-        <section id="news" class="py-5">
+        <section id="news" class="py-4">
             <div class="heading text-center">
                 <h1>Latest News From Loan Company</h1>
                 <p>Speed Up The Loan Process</p>
@@ -334,7 +357,7 @@
             </div>
         </div>
     </footer>
-    <div class="f-bottom py-3 px-md-5 px-2">
+    <div class="f-bottom py-2 pt-4 px-md-5 px-2">
         <div class="container-fluid">
             <div class="row text-white">
                 <div class="col-md-6 col-12 copy d-flex justify-content-md-start text-center justify-content-center">
