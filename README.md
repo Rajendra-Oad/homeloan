@@ -38,7 +38,7 @@ To run the project locally, you can use the development server:
 npm start
 
 
-oject Structure
+## Project Structure
 The project directory structure is as follows:
 
 project-root/
