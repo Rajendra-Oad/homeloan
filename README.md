@@ -45,17 +45,17 @@ project-root/
 ├── index.html
 ├── views/
 │   ├── login.html
-│   ├── register.html
+│   ├── signup.html
 ├── assets/
 │   ├── css/
 │   │   ├── style.css
         ├── login.css
-        ├── register.css
+        ├── signup.css
 │   │
 │   ├── js/
 │   │   ├── main.js
         ├── login.js
-        ├── register.js
+        ├── signup.js
 │   │ 
 │   ├── img/
 │   │   ├── (all image files used in the website)
