@@ -49,9 +49,13 @@ project-root/
 ├── assets/
 │   ├── css/
 │   │   ├── style.css
+        ├── login.css
+        ├── register.css
 │   │
 │   ├── js/
 │   │   ├── main.js
+        ├── login.js
+        ├── register.js
 │   │ 
 │   ├── img/
 │   │   ├── (all image files used in the website)
