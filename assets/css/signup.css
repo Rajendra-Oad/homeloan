@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--googe-font), sans-serif;
+    transition: all 0.2s;
+    cursor: default !important;
+}
+
+#alert-text {
+    position: fixed;
+    z-index: 5;
+    max-width: 100%;
+    top: -100px;
+    background: none;
+    left: 50%;
+    backdrop-filter: blur(20px);
+    filter: brightness(140%);
+    border-radius: 50px;
+    transition: all 0.2s;
+    transform: translate(-50%, -50%);
+}
+
+:root {
+    --main-theme: #fff;
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --theme-colors: #F4511E;
+    --googe-font: "Poppins", sans-serif;
+    --f-bottom: #141416;
+    --text-color: #000;
+    --text-50: #00000089;
+    --border-50: #00000054;
+    --nav-icon: #0000001b;
+    --shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    --border-color: none;
+    /* No border in light mode */
+}
+
+
+::placeholder {
+    color: #000;
+}
+
+.logo .icon {
+    width: 40px;
+    height: 40px;
+    background-color: #058affcd;
+    border-radius: 50%;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo span.icon {
+    font-size: 20px !important;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.password {
+    padding-right: 30px;
+    /* Adjust padding to accommodate the icon */
+}
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    /* Adjust the right distance from the input field */
+    transform: translateY(-50%);
+    cursor: pointer !important;
+}
+
+.toggle-password i {
+    cursor: pointer;
+    color: gray;
+}
+
+h3.signup {
+    font-size: 50px;
+    margin-top: 5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+a.logo {
+    position: fixed;
+    top: 14px;
+    font-size: 10rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #000;
+    font-weight: blod;
+    left: 35px;
+    transition: all 0.7s;
+}
+
+a.logo h4 {
+    font-size: 27px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+    border: none;
+    font-size: 18px;
+    min-width: 320px;
+    box-shadow: 0 1px 0 rgba(128, 128, 128, 0.409);
+    outline: none;
+    border-radius: 0;
+    position: relative;
+}
+
+input:hover {
+    box-shadow: 0 1px 0 gray, 0 2px 0 rgba(128, 128, 128, 0.267) !important;
+}
+
+input:active,
+input:focus {
+    box-shadow: 0 1px 0 #058aff !important;
+}
+
+
+
+.checkbox-wrapper-21 .control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .checkbox-wrapper-21 .control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  .checkbox-wrapper-21 .control__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background: #e6e6e6;
+  }
+  .checkbox-wrapper-21 .control:hover input ~ .control__indicator,
+  .checkbox-wrapper-21 .control input:focus ~ .control__indicator {
+    background: #ccc;
+  }
+  .checkbox-wrapper-21 .control input:checked ~ .control__indicator {
+    background: #2aa1c0;
+  }
+  .checkbox-wrapper-21 .control:hover input:not([disabled]):checked ~ .control__indicator,
+  .checkbox-wrapper-21 .control input:checked:focus ~ .control__indicator {
+    background: #0e647d;
+  }
+  .checkbox-wrapper-21 .control input:disabled ~ .control__indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  .checkbox-wrapper-21 .control__indicator:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+  .checkbox-wrapper-21 .control input:checked ~ .control__indicator:after {
+    display: block;
+  }
+  .checkbox-wrapper-21 .control--checkbox .control__indicator:after {
+    left: 8px;
+    top: 4px;
+    width: 3px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .checkbox-wrapper-21 .control--checkbox input:disabled ~ .control__indicator:after {
+    border-color: #7b7b7b;
+  }
+
+
+
+button[type="submit"] {
+    border: 1px solid #1184ff4a;
+    border-radius: 30px;
+    margin-top: 20px;
+    background-color: #fff;
+    color: #058aff;
+    min-width: 120px;
+    transition: all 0.7s;
+}
+
+button[type="submit"]:hover {
+    border: 1px solid #1184ff42;
+    background-color: #058aff;
+    color: #fff;
+}
+
+button[type="submit"]:focus {
+    border: 1px solid #1184ff42;
+    background-color: #058aff;
+    color: #fff;
+}
+
+span.or-text {
+    position: relative;
+    text-align: center;
+    top: 185px;
+    left: -25px;
+    width: 50px;
+    height: 25px;
+    background-color: #fff;
+}
+
+span.underline {
+    text-decoration: underline;
+    color: gray;
+}
+
+span.underline:hover {
+    color: #000000;
+    cursor: pointer;
+}
+
+.bottom-policy-footer {
+    font-size: 12px;
+    margin-top: 60px;
+    color: gray;
+}
+
+#header-signup {
+    animation: ani 0.4s ease-out forwards;
+}
+
+@keyframes ani {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+}
+
+
+@media (max-width:768px) {
+
+    a.logo {
+        position: fixed;
+        top: 20px;
+        letter-spacing: 1px;
+        left: 30px;
+    }
+
+    /* h3.login {
+        font-size: 25px;
+        margin-top: 0rem;
+        font-weight: 500;
+        letter-spacing: 0px;
+    } */
+}
