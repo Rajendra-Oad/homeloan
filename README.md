@@ -36,23 +36,29 @@ To run the project locally, you can use the development server:
 
 ```bash
 npm start
+```
 
 
 oject Structure
 The project directory structure is as follows:
-
+```bash
 project-root/
-├── index.html
-├── views/
-│   ├── login.html
-│   ├── register.html
-├── assets/
-│   ├── css/
-│   │   ├── style.css
-│   │
-│   ├── js/
-│   │   ├── main.js
-│   │ 
-│   ├── img/
+├── index.html               # The main entry point of your website
+├── views/                   # Directory for HTML views
+│   ├── login.html           # Login page
+│   ├── signup.html          # Signup page
+├── assets/                  # Directory for all static assets
+│   ├── css/                 # Directory for CSS files
+│   │   ├── style.css        # General styles
+│   │   ├── login.css        # Styles specific to the login page
+│   │   ├── signup.css       # Styles specific to the signup page
+│   ├── js/                  # Directory for JavaScript files
+│   │   ├── main.js          # General scripts
+│   │   ├── login.js         # Scripts specific to the login page
+│   │   ├── signup.js        # Scripts specific to the signup page
+│   ├── img/                 # Directory for image files
 │   │   ├── (all image files used in the website)
-├── README.md
+├── README.md                # Project documentation
+
+
+```
