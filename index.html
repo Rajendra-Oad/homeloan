@@ -7,9 +7,7 @@
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- custom favicon  -->
-    <link rel="shortcut icon"
-        href="https://asset-service-bucket-prod.s3.us-west-2.amazonaws.com/f1eb6d3d-102e-49e2-bfc8-f8ace629ebc6"
-        type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/img/fav-icon.png" type="image/x-icon">
     <!-- fontawesome css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- custom css -->
@@ -84,19 +82,25 @@
         data-bs-target="#navbarNav">
         <div class="container-md">
             <a class="navbar-brand m-0 fw-medium fs-2 me-auto" href="index.html"><span>Home Loan</span></a>
-            <li class="nav-item d-flex align-items-center icon d-flex d-lg-none">
+            <li class="p-0 m-1 nav-item d-flex align-items-center icon d-flex d-lg-none special-icons">
                 <button class="nav-icon btn toggle-dark-mode border-0 rounded-pill">
                     <i class="fa-solid fa-moon text-dark"></i>
                 </button>
             </li>
-            <li class="nav-item d-flex align-items-center icon d-flex d-lg-none">
+            <li class="p-0 m-1 nav-item d-flex align-items-center icon d-flex d-lg-none special-icons">
                 <button class="nav-icon btn border-0 rounded-pill" onclick="showAlert()">
                     <i class="fa-solid fa-palette text-dark"></i>
                 </button>
             </li>
-            <button class="btn navbar-toggler d-lg-none special-icons" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <li class="p-0 m-1 nav-item d-flex align-items-center icon d-flex d-lg-none special-icons">
+                <a href="./views/login.html">
+                    <button class="nav-icon btn border-0 rounded-pill">
+                        <i class="fa-solid fa-user text-dark"></i>
+                    </button>
+                </a>
+            </li>
+            <button class="p-0 m-1 btn navbar-toggler d-lg-none special-icons" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <img src="assets/img/menu.png" alt="" class="cart-top-small-size"
                     style="width: 42px;border-radius: 50%;padding: 5px;">
             </button>
@@ -106,37 +110,57 @@
                         <a class="nav-link active" href="#top-bar" data-bs-target="#top-bar"
                             aria-current="page">Home</a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#main" data-bs-target="#main">Services</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service" data-bs-target="#main">Services</a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link" href="#news" data-bs-target="#news">News</a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link" href="#about" data-bs-target="#about">About</a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link" href="#contact" data-bs-target="#contact">Contact</a>
                     </li>
-                    <li class="nav-item d-flex align-items-center icon d-none d-md-flex">
+                    <li class="nav-item d-flex align-items-center icon d-none d-md-flex special-icons">
                         <button class="nav-icon btn toggle-dark-mode border-0 rounded-pill">
                             <i class="fa-solid fa-moon text-dark"></i>
 
                         </button>
                     </li>
-                    <li class="nav-item d-flex align-items-center icon d-none d-md-flex">
+                    <li class="nav-item d-flex align-items-center icon d-none d-md-flex special-icons">
                         <button class="nav-icon btn border-0 rounded-pill" onclick="showAlert()">
                             <i class="fa-solid fa-palette text-dark"></i>
 
                         </button>
                     </li>
+                    <li class="nav-item d-flex align-items-center d-none d-md-flex icon special-icons">
+                        <a href="./views/login.html">
+                            <button class="nav-icon btn border-0 rounded-3">
+                                <i class="fa-solid fa-user text-dark"></i>
+                            </button>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown d-none" id="userDropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="username">User</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./views/account.html">Account</a></li>
+                            <li><a class="dropdown-item" href="./views/settings.html">Settings</a></li>
+                            <li><a class="dropdown-item" href="#" id="logoutButton">Logout</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
             </div>
         </div>
+        
     </nav>
     <div class="color-picker-alert-box" id="alertBox">
-        <div class="alert alert-light alert-dismissible fade show m-0 rounded-0 w-100" role="alert" id="alert">
+        <div class="alert alert-light alert-dismissible fade show m-0 rounded-0 w-100 h-100 overflow-y-auto"
+            role="alert" id="alert">
             <div class="select-color pt-3">
                 <h5 class="fade-in">Choose a color</h5>
                 <div class="color-themes d-flex gap-2 mt-3 flex-wrap fade-in">
@@ -152,13 +176,13 @@
                     <div class="color" style="background: #CE3660;"></div>
                     <div class="color" style="background: #F4511E;"></div>
                     <div class="d-flex align-items-center justify-content-center text-center"
-                        style="background: var(--theme-colors);width: 160px;border-radius: 50px;">Selected color</div>
+                        style="background: var(--theme-colors);width: 160px;border-radius: 50px;height: 45px;">
+                        Selected color</div>
                 </div>
             </div>
             <button type="button" class="btn-close" onclick="showAlert()"></button>
         </div>
     </div>
-
 
     <!-- banner with scroll container-->
     <section id="banner">
@@ -314,12 +338,12 @@
                 <h1>Latest News From Loan Company</h1>
                 <p>Speed Up The Loan Process</p>
             </div>
-            <div class="container-md">
+            <div class="container-md fade-in">
                 <div class="row pb-4">
 
                     <div class="col-md-12 col-12 col-sm-12 col-lg-4">
 
-                        <div class="card mb-4 mb-lg-0 fade-in">
+                        <div class="card mb-4 mb-lg-0">
                             <img src="./assets/img/company4.jpg" alt="" style="width: 100%;" class="img-fluid">
                             <div class="card-body">
                                 <div class="card-title">Smart Moving Tips</div>
@@ -330,7 +354,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 col-12 col-sm-12 col-lg-4">
-                        <div class="card mb-4 mb-lg-0 fade-in">
+                        <div class="card mb-4 mb-lg-0">
                             <img src="./assets/img/compant2.jpg" alt="" style="width: 100%;" class="img-fluid">
                             <div class="card-body">
                                 <div class="card-title">A Big Time Saver</div>
@@ -341,7 +365,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 col-12 col-sm-12 col-lg-4">
-                        <div class="card fade-in">
+                        <div class="card ">
                             <img src="./assets/img/company1.jpg" alt="" style="width: 100%;" class="img-fluid">
                             <div class="card-body">
                                 <div class="card-title">Is Now The Time To Fix?</div>
@@ -406,7 +430,7 @@
                                         <div class="card bg-light mb-2 mb-md-0">
                                             <div
                                                 class="card-body head-rate d-flex align-items-center flex-column justify-content-start">
-                                                <span>3.5</span>
+                                                <span class="count" data-count="72">0</span>
                                                 <p class="m-0 p-0">Year Experience</p>
                                             </div>
                                         </div>
@@ -415,7 +439,7 @@
                                         <div class="card bg-light mb-2 mb-md-0">
                                             <div
                                                 class="card-body head-rate d-flex align-items-center flex-column justify-content-start">
-                                                <span>100K</span>
+                                                <span class="count" data-count="62000000">0</span>
                                                 <p class="m-0 p-0">Trusted to Users</p>
                                             </div>
                                         </div>
@@ -424,8 +448,8 @@
                                         <div class="card bg-light mb-2 mb-md-0">
                                             <div
                                                 class="card-body head-rate d-flex align-items-center flex-column justify-content-start">
-                                                <span>23</span>
-                                                <p class="m-0 p-0">Project Challenge</p>
+                                                <span class="count" data-count="253455999">0</span>
+                                                <p class="m-0 p-0">Loans</p>
                                             </div>
                                         </div>
                                     </div>
@@ -548,6 +572,18 @@
                     <i class="fa-brands fa-linkedin-in"></i>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+            <button type="button" class="btn-close text-reset me-3" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            ...
         </div>
     </div>
 

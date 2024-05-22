@@ -5,7 +5,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: var(--googe-font), sans-serif;
-    transition: all 0.2s;
     cursor: default !important;
 }
 
@@ -29,29 +28,44 @@
     position: absolute;
     overflow: hidden;
     width: 100%;
+    left: 0;
+    z-index: 999;
 }
 button.btn-close {
-    background-color: var(--border-50);
+    background-color: none;
     outline: none !important;
     border: none;
     box-shadow: none !important;
     border-radius: 50%;
     font-size: 16px;
-    padding: 10px !important;
-    margin:15px 15px 0 0;
+    width: 40px;
+    height: 45px;
+    padding: 0 3px!important;
+    margin: 15px 15px 0 0;
+}
+button.btn-close:hover {
+    background-color: var(--border-50);
 }
 
 .alert {
     max-height: 0;
     /* Start with 0 height */
     overflow: hidden;
+    position: sticky;
+    z-index: 999;
     /* Hide the content initially */
     transition: max-height 0.3s ease;
     /* Smooth transition for height change */
 }
 
+.alert-dismissible {
+    padding-right: 1rem;
+}
+
 .alert.show {
-    max-height: 200px;
+    max-height: 600px;
+    height: 200px;
+    /* transform: translateY(100px); */
     /* Adjust this value as per your need */
 }
 
@@ -75,7 +89,7 @@ button.btn-close {
 
 .fade-in {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(15px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out, all 0.7s;
 }
 
@@ -101,6 +115,7 @@ button.btn-close {
 body {
     background-color: var(--main-theme);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -259,9 +274,9 @@ nav .nav-item.icon {
     transition: all 0.7s;
 }
 
-nav .nav-icon:active i {
+/* nav .nav-icon:active i {
     transform: rotate(720deg);
-}
+} */
 
 /* banner css */
 #banner img {
@@ -405,13 +420,14 @@ nav .nav-icon:active i {
 #contact input {
     height: 45px !important;
     background-color: var(--main-theme) !important;
+    color: var(--text-color);
 }
 
 #contact textarea {
     background-color: var(--main-theme) !important;
 }
 
-::placeholder {
+#contact ::placeholder {
     color: var(--text-50) !important;
 }
 
@@ -426,8 +442,8 @@ nav .nav-icon:active i {
         /* background-color: var(--theme-colors); */
     }
 
-    ::placeholder {
-        color: var(--text-50) !important;
+    #contact ::placeholder {
+        color: var(--text-color) !important;
     }
 }
 
@@ -501,10 +517,10 @@ footer .col2 span {
 }
 
 footer .col4 form input {
-    background-color: #0E0F11;
+    background-color: transparent;
     border: 1px solid rgba(128, 128, 128, 0.514);
     padding: 9.2px;
-    color: #F6F7F9;
+    color: #fff;
     outline: none;
     width: 200px;
     position: relative;
