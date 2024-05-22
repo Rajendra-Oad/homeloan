@@ -40,8 +40,9 @@ npm start
 
 
 ## Project Structure
-```bash 
 The project directory structure is as follows:
+```bash 
+
 
 project-root/
 ├── index.html               # The main entry point of your website
