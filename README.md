@@ -36,9 +36,11 @@ To run the project locally, you can use the development server:
 
 ```bash
 npm start
+```
 
 
 ## Project Structure
+``bash 
 The project directory structure is as follows:
 
 project-root/
@@ -58,4 +60,5 @@ project-root/
 │   ├── img/                 # Directory for image files
 │   │   ├── (all image files used in the website)
 ├── README.md                # Project documentation
+```
 
