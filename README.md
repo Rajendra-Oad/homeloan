@@ -40,7 +40,7 @@ npm start
 
 
 ## Project Structure
-``bash 
+```bash 
 The project directory structure is as follows:
 
 project-root/
