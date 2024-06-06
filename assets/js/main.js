@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   // Scroll to top button functionality
   let btn = document.getElementById("topScroll");
-  let navbar = document.getElementById("navbar");
+  let navbar = document.getElementById("navbarNav");
   let prevScrollpos = window.pageYOffset;
 
   window.onscroll = () => {
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+  document.documentElement.Top = 0; // For Chrome, Firefox, IE, and Opera
 }
 
 //show alert

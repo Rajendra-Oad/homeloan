@@ -46,6 +46,9 @@ button.btn-close {
 button.btn-close:hover {
     background-color: var(--border-50);
 }
+button.btn-close:focus {
+    background-color: var(--border-50);
+}
 
 .alert {
     max-height: 0;

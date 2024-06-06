@@ -44,7 +44,8 @@
     color: #000;
 }
 
-.logo .icon {
+a.logo1 .icon {
+    margin: 10px;
     width: 40px;
     height: 40px;
     background-color: #058affcd;
@@ -55,7 +56,11 @@
     justify-content: center;
 }
 
-.logo span.icon {
+a.logo1 {
+    text-decoration: none;
+}
+
+.logo1 span.icon {
     font-size: 20px !important;
 }
 
@@ -93,21 +98,8 @@ input::-webkit-inner-spin-button {
 
 h3.signup {
     font-size: 50px;
-    margin-top: 5rem;
     font-weight: 600;
     letter-spacing: 1px;
-}
-
-a.logo {
-    position: fixed;
-    top: 14px;
-    font-size: 10rem;
-    text-decoration: none;
-    letter-spacing: 1px;
-    color: #000;
-    font-weight: blod;
-    left: 35px;
-    transition: all 0.7s;
 }
 
 a.logo h4 {

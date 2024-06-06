@@ -9,6 +9,105 @@
     cursor: default !important;
 }
 
+.error-alert {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}
+.alert {
+    display: none;
+    padding: 10px;
+    margin-top: 10px;
+}
+.alert-success {
+    color: green;
+}
+.alert-error {
+    color: red;
+}
+#loginBtn {
+    transition: background-color 0.3s ease;
+}
+
+#loginBtn:disabled {
+    background-color: transparent;
+    border: 1px solid #058aff;
+    cursor: not-allowed;
+}
+
+/* Style for success button */
+.btn-success {
+    background-color: green;
+    color: white;
+}
+
+/* Loading spinner icon */
+.spinner {
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#loginBtn:active {
+    background-color: #058affcd;
+    border: 1px solid transparent;
+    color: #ffffff;
+}
+
+.success-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    font-size: 24px;
+    color: green;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.tick-icon {
+    font-size: 50px;
+    background-color: rgba(97, 255, 97, 0.813);
+    color: green;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(97, 255, 97, 0.813);
+    margin-bottom: 20px;
+    animation: tickAnimation 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes tickAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
 :root {
     --main-theme: #fff;
     --primary-color: #000000;
@@ -44,7 +143,8 @@
     color: #000;
 }
 
-.logo .icon {
+a.logo1 .icon {
+    margin: 10px;
     width: 40px;
     height: 40px;
     background-color: #058affcd;
@@ -55,7 +155,11 @@
     justify-content: center;
 }
 
-.logo span.icon {
+a.logo1 {
+    text-decoration: none;
+}
+
+.logo1 span.icon {
     font-size: 20px !important;
 }
 
@@ -90,20 +194,17 @@ a.logo-sm {
 
 h3.login {
     font-size: 50px;
-    margin-top: 5rem !important;
     font-weight: 600;
     letter-spacing: 1px;
 }
 
 a.logo {
-    position: fixed;
-    top: 15px;
+    display: block !important;
     font-size: 10rem !important;
     text-decoration: none;
     letter-spacing: 1px;
     color: #000;
     font-weight: blod;
-    left: 35px;
     transition: all 0.7s;
 }
 

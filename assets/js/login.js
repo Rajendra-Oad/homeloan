@@ -6,60 +6,74 @@ let passwordInput = document.getElementById("password");
 eyeIcon.style.display = "none";
 
 eyeIcon.addEventListener("click", function () {
-    // Toggle password visibility
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text"; // Show password
-        this.classList.add("fa-eye-slash");
-        this.classList.remove("fa-eye");
-    } else {
-        passwordInput.type = "password"; // Hide password
-        this.classList.remove("fa-eye-slash");
-        this.classList.add("fa-eye");
-    }
+  // Toggle password visibility
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text"; // Show password
+    this.classList.add("fa-eye-slash");
+    this.classList.remove("fa-eye");
+  } else {
+    passwordInput.type = "password"; // Hide password
+    this.classList.remove("fa-eye-slash");
+    this.classList.add("fa-eye");
+  }
 });
 
 passwordInput.addEventListener("input", function () {
-    // Show/hide the eye icon based on input length
-    if (this.value.length > 0) {
-        eyeIcon.style.display = "block";
-    } else {
-        eyeIcon.style.display = "none";
-    }
+  // Show/hide the eye icon based on input length
+  if (this.value.length > 0) {
+    eyeIcon.style.display = "block";
+  } else {
+    eyeIcon.style.display = "none";
+  }
+});
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    checkFormErrors();
 });
 
 
-// Function to show the alert text
-function showAlert(message, type = 'error') {
-    const alertContainer = document.getElementById("alert-text");
-    alertContainer.innerHTML = `<i class="fa-solid fa-${type === 'error' ? 'triangle-exclamation' : 'circle-check'}"></i> ${message}`;
-    alertContainer.style.border = type === 'error' ? "1px solid rgba(255, 0, 0, 0.2)" : "1px solid rgba(0, 128, 0, 0.2)";
-    alertContainer.style.color = type === 'error' ? "rgb(167, 45, 45)" : "rgb(28, 105, 28)";
-    alertContainer.style.backgroundColor = type === 'error' ? "rgba(255, 0, 0, 0.2)" : "rgba(0, 128, 0, 0.2)";
-    alertContainer.style.top = "-25px";
-    alertContainer.style.padding = "10px 20px";
-    alertContainer.style.display = "block"; // Show the alert text
-
-    // Hide the alert text after 3.5 seconds
-    setTimeout(() => {
-        alertContainer.style.top = "-100px";
-        alertContainer.style.display = "none";
-    }, 2000);
-}
-
 
 function checkFormErrors() {
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let emailError = document.getElementById("emailError");
+    let passwordError = document.getElementById("passwordError");
+    let emailField = document.getElementById("email");
+    let passwordField = document.getElementById("password");
+
+    emailField.classList.remove("input-error", "input-success");
+    passwordField.classList.remove("input-error", "input-success");
+
+    
 
     if (email === "" && password === "") {
-        showAlert('Enter email and password');
+        // showAlert('Enter email and password', 'error');
+        emailError.innerHTML = "<i class='fa-solid fa-circle-exclamation p-0 me-2 mt-2'></i>Fill the Email Address";
+        passwordError.innerHTML = "<i class='fa-solid fa-circle-exclamation p-0 me-2 mt-2'></i>Fill the above Password";
+        emailField.classList.add("input-error");
+        passwordField.classList.add("input-error");
     } else if (email === "") {
-        showAlert('Enter email address');
+        // showAlert('Enter email address', 'error');
+        emailError.innerHTML = "<i class='fa-solid fa-circle-exclamation p-0 me-2 mt-2'></i>Fill the Email Address";
+        passwordError.innerHTML = "";
+        emailField.classList.add("input-error");
+        passwordField.classList.remove("input-error");
     } else if (password === "") {
-        showAlert('Enter password');
-    }
-    else {
-        // No errors
+        // showAlert('Enter password', 'error');
+        emailError.innerHTML = "";
+        passwordError.innerHTML = "<i class='fa-solid fa-circle-exclamation p-0 me-2 mt-2'></i>Fill the above Password";
+        emailField.classList.remove("input-error");
+        passwordField.classList.add("input-error");
+    } else {
+        emailError.innerHTML = "";
+        passwordError.innerHTML = "";
+        emailField.classList.add("input-success");
+        passwordField.classList.add("input-success");
+
+        // Disable button to prevent multiple submissions
+        let loginBtn = document.getElementById('loginBtn');
+        loginBtn.disabled = true;
+
         const data = new FormData();
         data.append("userEmail", email);
         data.append("userPassword", password);
@@ -67,30 +81,72 @@ function checkFormErrors() {
         let http = new XMLHttpRequest();
         http.open("POST", "http://ilandertech.com/api/index.php/Welcome/StuLogin");
         http.send(data);
+
         http.onreadystatechange = () => {
-            if (http.status == 200 && http.readyState == 4) {
-                let res = JSON.parse(http.response);
-                if (res.status == 1) {
-                    localStorage.setItem("email", email);
-                    showAlert(res.message, 'success');
-                    console.log(res.message);
-                    // redirect to dashboard on correct entry in inputs
-                    setTimeout(() => {
-                        window.location.assign('../index.html');
-                    }, 3000);
+            if (http.readyState == 4) {
+                loginBtn.disabled = false;
+                if (http.status == 200) {
+                    let res = JSON.parse(http.responseText);
+                    if (res.status == 1) {
+                        localStorage.setItem("email", email);
+                        showSuccessMessage(res.message);
+                        console.log(res.message);
+                    } else {
+                        showAlert(res.message, 'error');
+                        console.log(res.message);
+                    }
                 } else {
-                    showAlert(res.message);
-                    console.log(res.message);
+                    showAlert('An error occurred. Please try again.', 'error');
+                    console.log('Error:', http.statusText);
                 }
             }
-        }
+        };
+
+        http.onerror = () => {
+            loginBtn.disabled = false;
+            showAlert('Network error. Please check your connection and try again.', 'error');
+            console.log('Network error');
+        };
     }
 }
 
+function showAlert(message, type = 'error') {
+    const alertText = document.getElementById('alert-text');
+    alertText.textContent = message;
+    alertText.className = `alert alert-${type}`;
+    alertText.style.display = 'block';
+    alertText.innerHTML = `<i class="fa-solid fa-${type === 'error' ? 'triangle-exclamation' : 'circle-check'}"></i> ${message}`;
+    alertText.style.border = type === 'error' ? "1px solid rgba(255, 0, 0, 0.2)" : "1px solid rgba(0, 128, 0, 0.2)";
+    alertText.style.color = type === 'error' ? "rgb(167, 45, 45)" : "rgb(28, 105, 28)";
+    alertText.style.backgroundColor = type === 'error' ? "rgba(255, 0, 0, 0.2)" : "rgba(0, 128, 0, 0.2)";
+    alertText.style.top = "-30px";
+    alertText.style.padding = "10px 20px";
+    alertText.style.display = "block"; // Show the alert text
+    setTimeout(() => {
+        alertText.style.display = 'none';
+    }, 3000);
+}
 
-// click to the login button
-let loginBtn = document.getElementById('loginBtn');
-loginBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    checkFormErrors();
-});
+function showSuccessMessage(message) {
+    const body = document.body;
+    let button = document.getElementById('loginBtn');
+    button.disabled = true; // Disable the button during login process
+    
+    // Display loading icon inside the button
+    button.innerHTML = '<img src="https://img.icons8.com/ios/50/loading.png" alt="loading" class="me-2 spinner py-1 " style="heigth:10px;width:20px"/>';
+    // <i class="fa-solid fa-circle-nodes me-2 spinner py-1 "></i>
+    setTimeout(()=>{
+        body.innerHTML = `
+        <div class="success-message">
+            <div class="tick-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            ${message}
+        </div>
+    `;
+    setTimeout(() => {
+        window.location.assign('../index.html');
+    }, 2500);
+    },2000)
+}
+

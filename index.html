@@ -36,15 +36,7 @@
     </style>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="0" tabindex="0">
-    <!-- color picker -->
-    <div class="color-picker d-none">
-        <form action="/action_page.php">
-            <label for="favcolor">Select your favorite color:</label>
-            <input type="color" id="favcolor" name="favcolor" value="#ff0000">
-            <p><input type="submit" value="Submit"></p>
-        </form>
-    </div>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
     <!-- top-scroll -->
     <div id="scroll">
         <button class="btn btn-light rounded" id="topScroll" onclick="topFunction()"><i class="fa-solid fa-arrow-up"
@@ -78,8 +70,7 @@
     </div>
 
     <!-- navbar container -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar" data-bs-spy="scroll"
-        data-bs-target="#navbarNav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbarNav">
         <div class="container-md">
             <a class="navbar-brand m-0 fw-medium fs-2 me-auto" href="index.html"><span>Home Loan</span></a>
             <li class="p-0 m-1 nav-item d-flex align-items-center icon d-flex d-lg-none special-icons">
@@ -107,20 +98,19 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                     <li class="nav-item ">
-                        <a class="nav-link active" href="#top-bar" data-bs-target="#top-bar"
-                            aria-current="page">Home</a>
+                        <a class="nav-link active" href="#top-bar">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#service" data-bs-target="#main">Services</a>
+                        <a class="nav-link" href="#service">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#news" data-bs-target="#news">News</a>
+                        <a class="nav-link" href="#news">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about" data-bs-target="#about">About</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact" data-bs-target="#contact">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item d-flex align-items-center icon d-none d-md-flex special-icons">
                         <button class="nav-icon btn toggle-dark-mode border-0 rounded-pill">
@@ -153,36 +143,38 @@
                         </ul>
                     </li>
                 </ul>
+                <div class="color-picker-alert-box" id="alertBox">
+                    <div class="alert alert-light alert-dismissible fade show m-0 rounded-0 w-100 h-100 overflow-y-auto"
+                        role="alert" id="alert">
+                        <div class="select-color pt-3">
+                            <h5 class="fade-in">Choose a color</h5>
+                            <div class="color-themes d-flex gap-2 mt-3 flex-wrap fade-in">
+                                <div class="color" style="background: #3E6BFF;"></div>
+                                <div class="color" style="background: #99907D;"></div>
+                                <div class="color" style="background: #7ECF3D;"></div>
+                                <div class="color" style="background: #E094CB;"></div>
+                                <div class="color" style="background: #F78E49;"></div>
+                                <div class="color" style="background: #8E7480;"></div>
+                                <div class="color" style="background: #B9C738;"></div>
+                                <div class="color" style="background: #6E5FE5;"></div>
+                                <div class="color" style="background: #8BE9D9;"></div>
+                                <div class="color" style="background: #CE3660;"></div>
+                                <div class="color" style="background: #F4511E;"></div>
+                                <div class="d-flex align-items-center justify-content-center text-center"
+                                    style="background: var(--theme-colors);width: 160px;border-radius: 50px;height: 45px;">
+                                    Selected color</div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-close" onclick="showAlert()"></button>
+                    </div>
+                </div>
 
             </div>
         </div>
         
+        
     </nav>
-    <div class="color-picker-alert-box" id="alertBox">
-        <div class="alert alert-light alert-dismissible fade show m-0 rounded-0 w-100 h-100 overflow-y-auto"
-            role="alert" id="alert">
-            <div class="select-color pt-3">
-                <h5 class="fade-in">Choose a color</h5>
-                <div class="color-themes d-flex gap-2 mt-3 flex-wrap fade-in">
-                    <div class="color" style="background: #3E6BFF;"></div>
-                    <div class="color" style="background: #99907D;"></div>
-                    <div class="color" style="background: #7ECF3D;"></div>
-                    <div class="color" style="background: #E094CB;"></div>
-                    <div class="color" style="background: #F78E49;"></div>
-                    <div class="color" style="background: #8E7480;"></div>
-                    <div class="color" style="background: #B9C738;"></div>
-                    <div class="color" style="background: #6E5FE5;"></div>
-                    <div class="color" style="background: #8BE9D9;"></div>
-                    <div class="color" style="background: #CE3660;"></div>
-                    <div class="color" style="background: #F4511E;"></div>
-                    <div class="d-flex align-items-center justify-content-center text-center"
-                        style="background: var(--theme-colors);width: 160px;border-radius: 50px;height: 45px;">
-                        Selected color</div>
-                </div>
-            </div>
-            <button type="button" class="btn-close" onclick="showAlert()"></button>
-        </div>
-    </div>
+    
 
     <!-- banner with scroll container-->
     <section id="banner">
@@ -210,7 +202,7 @@
     </section>
 
     <!-- main content -->
-    <main id="main" data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+    <main id="main">
         <section id="service" class="py-5">
             <div class="heading mx-auto text-center fade-in">
                 <h1>Loan Products We Offer</h1>
@@ -476,7 +468,7 @@
                             referrerpolicy="no-referrer-when-downgrade" class="rounded-3 w-100 slide-inL"></iframe>
                     </div>
                     <div class="col-lg-5 col-12 mt-4 mt-lg-0">
-                        <form class="slide-inL">
+                        <form class="slide-inL" method="post">
                             <div class="form-group">
                                 <!-- <label for="name">Your Name*</label> -->
                                 <input type="text" class="form-control" id="name" placeholder="Your Name*" required
@@ -499,7 +491,7 @@
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary w-100 h-100"
-                                    [disabled]="emailForm.invalid">SEND</button>
+                                    name="send">SEND</button>
                             </div>
                         </form>
                     </div>
@@ -518,6 +510,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Maiores ipsa ducimus <br>aliquid,
                     officia
                     pariatur vitae perferendis <br>cumque, dolorem!</p>
+                    <a  href="https://icons8.com/icon/59145/loading" class="text-light">Loading</a> icon by <a href="https://icons8.com" class="text-light">Icons8</a>
             </div>
             <div class="col-12 col2 col-sm-6 col-lg-4 col-xl-3 mt-3 mt-md-0">
                 <h5>Contact Us</h5>
@@ -631,3 +624,5 @@
 </body>
 
 </html>
+
+
