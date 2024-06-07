@@ -110,14 +110,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     // Show or hide the navbar
-    if (prevScrollpos > currentScrollPos + 1) {
+    if (prevScrollpos > currentScrollPos + 0.5) {
       navbar.style.top = "0px";// Show the navbar
-    } else if (prevScrollpos < currentScrollPos - 1) {
-      navbar.style.top = "-500px";// Hide the navbar (adjust height if needed)
-      navbar.style.transition = "0.5s";
-      navbar.style.transitionDelay = "0.1s";  
+    } else if (prevScrollpos < currentScrollPos - 0.5) {
+      navbar.style.top = "-400px";// Hide the navbar (adjust height if needed)
+      navbar.style.transition = "2s";  
       navbar.style.transitionTimingFunction = "ease-in-out";
-      navbar.style.transitionDuration = "0.8s"
+      navbar.style.transitionDuration = "0.3s"
     }
 
     prevScrollpos = currentScrollPos; // Update previous scroll position
@@ -126,7 +125,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
-  document.documentElement.Top = 0; // For Chrome, Firefox, IE, and Opera
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+  document.body.style.transition = "2s";
+  console.log("Top button clicked");
 }
 
 
