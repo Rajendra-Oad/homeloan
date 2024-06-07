@@ -68,10 +68,10 @@ a.logo1 {
     position: relative;
 }
 
-.password {
+/* .password {
     padding-right: 30px;
-    /* Adjust padding to accommodate the icon */
-}
+
+} */
 
 
 
@@ -112,7 +112,7 @@ input[type="password"],
 input[type="number"] {
     border: none;
     font-size: 18px;
-    min-width: 320px;
+    min-width: 285px;
     box-shadow: 0 1px 0 rgba(128, 128, 128, 0.409);
     outline: none;
     border-radius: 0;

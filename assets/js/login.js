@@ -26,6 +26,8 @@ passwordInput.addEventListener("input", function () {
     eyeIcon.style.display = "none";
   }
 });
+
+
 document.getElementById('loginForm').addEventListener('submit', function (e) {
     e.preventDefault();
     checkFormErrors();
