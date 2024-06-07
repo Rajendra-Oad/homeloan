@@ -27,9 +27,9 @@
 .color-picker-alert-box {
     position: absolute;
     overflow: hidden;
-    width: 100%;
-    left: 0;
-    z-index: 999;
+    display: none;
+    top: 0px;
+    z-index: 1001;
 }
 button.btn-close {
     background-color: none;
@@ -67,7 +67,6 @@ button.btn-close:focus {
 
 .alert.show {
     max-height: 600px;
-    height: 200px;
     /* transform: translateY(100px); */
     /* Adjust this value as per your need */
 }
@@ -90,29 +89,10 @@ button.btn-close:focus {
     border: 1px solid #fff;
 }
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(15px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out, all 0.7s;
-}
 
-.slide-inR {
-    opacity: 0;
-    transform: translateX(10%);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.slide-inL {
-    opacity: 0;
-    transform: translateX(-10%);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in.show,
-.slide-inR.show,
-.slide-inL.show {
-    opacity: 1;
-    transform: translateY(0);
+/* Show the dropdown menu when toggled */
+.show {
+    display: block;
 }
 
 body {
@@ -124,6 +104,7 @@ body {
 .navbar {
     background-color: var(--main-theme) !important;
     color: var(--text-color);
+    z-index: 1000; 
 }
 
 .navbar a {

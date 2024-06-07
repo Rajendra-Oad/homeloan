@@ -1,4 +1,39 @@
 document.addEventListener("DOMContentLoaded", (event) => {
+
+
+  var dropdownButton = document.getElementById("dropdownButton");
+    var dropdownMenu = document.getElementById("alertBox");
+
+    dropdownButton.addEventListener("click", function(event) {
+      // Prevent the default action and stop propagation
+      event.preventDefault();
+      event.stopPropagation();
+
+      // Toggle the visibility of the dropdown menu
+      dropdownMenu.classList.toggle("show");
+
+      // Set the top position of the dropdown menu
+      var rect = dropdownButton.getBoundingClientRect();
+      dropdownMenu.style.top = rect.bottom + "px";
+      dropdownMenu.style.right = rect.bottom + "px";
+  });
+
+  // Close the dropdown if the user clicks outside of it
+  window.addEventListener("click", function(event) {
+      if (!event.target.matches('#dropdownButton')) {
+          if (dropdownMenu.classList.contains('show')) {
+              dropdownMenu.classList.remove('show');
+          }
+      }
+      
+    
+  });
+  // Hide the dropdown menu initially
+  dropdownMenu.classList.remove('show');
+
+
+
+
   let navLinks = document.querySelectorAll(".nav-link");
 
   navLinks.forEach((navLink) => {
@@ -59,43 +94,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     observer.observe(count);
   });
 
-  // Intersection Observer for fade-in and slide-in animations
-  const fadeIns = document.querySelectorAll(".fade-in");
-  const slideInsLeft = document.querySelectorAll(".slide-inL");
-  const slideInsRight = document.querySelectorAll(".slide-inR");
-
-  const options = {
-    threshold: 0.1, // Adjust this value as needed
-    rootMargin: "0px 0px -10px 0px",
-  };
-
-  const fadeInOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("show");
-      observer.unobserve(entry.target);
-    });
-  }, options);
-
-  const slideInOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("show");
-      observer.unobserve(entry.target);
-    });
-  }, options);
-
-  fadeIns.forEach((fadeIn) => {
-    fadeInOnScroll.observe(fadeIn);
-  });
-
-  slideInsLeft.forEach((slideInL) => {
-    slideInOnScroll.observe(slideInL);
-  });
-  slideInsRight.forEach((slideInR) => {
-    slideInOnScroll.observe(slideInR);
-  });
-
   // Scroll to top button functionality
   let btn = document.getElementById("topScroll");
   let navbar = document.getElementById("navbarNav");
@@ -115,7 +113,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     if (prevScrollpos > currentScrollPos + 1) {
       navbar.style.top = "0px";// Show the navbar
     } else if (prevScrollpos < currentScrollPos - 1) {
-      navbar.style.top = "-100px";// Hide the navbar (adjust height if needed)
+      navbar.style.top = "-500px";// Hide the navbar (adjust height if needed)
       navbar.style.transition = "0.5s";
       navbar.style.transitionDelay = "0.1s";  
       navbar.style.transitionTimingFunction = "ease-in-out";
@@ -131,15 +129,6 @@ function topFunction() {
   document.documentElement.Top = 0; // For Chrome, Firefox, IE, and Opera
 }
 
-//show alert
-function showAlert() {
-  let alert = document.getElementById("alertBox");
-  if (alert.style.display === "none") {
-    alert.style.display = "block";
-  } else {
-    alert.style.display = "none";
-  }
-}
 
 // color theme changes
 document.querySelectorAll(".color-themes .color").forEach((color) => {

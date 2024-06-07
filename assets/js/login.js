@@ -133,7 +133,7 @@ function showSuccessMessage(message) {
     button.disabled = true; // Disable the button during login process
     
     // Display loading icon inside the button
-    button.innerHTML = '<img src="https://img.icons8.com/ios/50/loading.png" alt="loading" class="me-2 spinner py-1 " style="heigth:10px;width:20px"/>';
+    button.innerHTML = '<img src="https://img.icons8.com/ios/50/loading.png" alt="loading" class="me-2 spinner" style="heigth:1px;width:20px;padding:2px 0"/>';
     // <i class="fa-solid fa-circle-nodes me-2 spinner py-1 "></i>
     setTimeout(()=>{
         body.innerHTML = `
